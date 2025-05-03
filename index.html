@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VivaLume - Produtos que Inspiram</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fefefe;
+      color: #333;
+    }
+    header {
+      background-color: #f8b500;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .produto {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .produto button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #f8b500;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .produto button:hover {
+      background-color: #d99900;
+    }
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 1.2em;
+      color: #f8b500;
+    }
+    #carrinho {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>VivaLume</h1>
+    <p>Produtos que inspiram sua vida</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <div id="carrinho">
+    Carrinho: <span id="contador-carrinho">0</span> itens
+  </div>
+
+  <section id="home">
+    <h2>Bem-vindo à VivaLume</h2>
+    <p>Transformamos ideias em produtos incríveis para você. Qualidade, beleza e inspiração em um só lugar.</p>
+  </section>
+
+  <section id="produtos">
+    <h2>Nossos Produtos</h2>
+    <div class="produtos">
+      <div class="produto">
+        <h3>Produto 1</h3>
+        <p>Descrição do produto.</p>
+        <button onclick="adicionarAoCarrinho()">Adicionar ao carrinho</button>
+      </div>
+      <div class="produto">
+        <h3>Produto 2</h3>
+        <p>Descrição do produto.</p>
+        <button onclick="adicionarAoCarrinho()">Adicionar ao carrinho</button>
+      </div>
+      <div class="produto">
+        <h3>Produto 3</h3>
+        <p>Descrição do produto.</p>
+        <button onclick="adicionarAoCarrinho()">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>A VivaLume nasceu para oferecer produtos únicos e cheios de significado. Cada detalhe é pensado para inspirar e encantar.</p>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Email: contato@vivalume.com</p>
+    <p>Instagram: <a href="https://instagram.com/vivalume" target="_blank">@vivalume</a></p>
+    <div class="social-icons">
+      <a href="https://facebook.com/vivalume" target="_blank">Facebook</a>
+      <a href="https://instagram.com/vivalume" target="_blank">Instagram</a>
+      <a href="https://wa.me/5599999999999" target="_blank">WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 VivaLume. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    let contador = 0;
+    function adicionarAoCarrinho() {
+      contador++;
+      document.getElementById('contador-carrinho').textContent = contador;
+    }
+  </script>
+</body>
+</html>
